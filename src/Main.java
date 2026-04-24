@@ -34,7 +34,7 @@ public class Main {
         Character wizard1 = registry.get("Wizard");
         Character archer1 = registry.get("Archer");
 
-        // Show results.
+        // Show results of clonation.
         System.out.println("Warrior #1");
         warrior1.display();
 

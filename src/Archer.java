@@ -9,7 +9,6 @@ public class Archer extends Character{
     // Constructor.
     public Archer(String bow, String specialArrows) {
         super("Guillermo", "Archer", 5, 100, 90);
-        //Revisar datos inicializados.
         this.bow = bow;
         this.specialArrows = specialArrows;
 
