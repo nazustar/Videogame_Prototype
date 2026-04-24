@@ -9,20 +9,42 @@ public class Warrior extends Character{
 
     // Constructor.
     public Warrior(String weapon, String technique, String armor) {
-        super("Warrior", "Warrior", 1, 70, 100);
+        super("Ethan", "Warrior", 1, 70, 100);
+        this.weapon = weapon;
+        this.technique = technique;
+        this.armor = armor;
+
         abilities.add("Smash");
-        this.weapon = "Spear";
-        this.technique = "Hit enemies";
-        this.armor = "Silver armor";
+        abilities.add("Burn");
+    }
+
+    // Copy constructor.
+    public Warrior(Warrior other){
+        super(other);
+        this.weapon = other.weapon;
+        this.technique = other.technique;
+        this.armor = other.armor;
     }
 
     @Override
     public Character clone() {
-        return new Warrior(weapon, technique, armor);
+        return new Warrior(this);
     }
 
+    // Display method from character.
     @Override
-    public void display(){
-        System.out.println("Texto ejemplo :v");
+    public void display() {
+        System.out.println(
+            "Name: " + name +
+            "\nClass: " + characterClass +
+            "\nLevel: " + level +
+            "\nLife: " + lifePoints +
+            "\nEnergy: " + energyPoints +
+            "\nWeapon: " + weapon +
+            "\nTechnique: " + technique +
+            "\nArmor: " + armor +
+            "\nAbilities: " + abilities +
+            "\n"
+        );
     }
 }
